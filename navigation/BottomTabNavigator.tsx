@@ -1,4 +1,4 @@
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, Entypo, AntDesign, FontAwesome5, MaterialIcons, FontAwesome } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as React from 'react';
 
@@ -24,35 +24,35 @@ export default function BottomTabNavigator() {
         name="Home"
         component={HomeScreen}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <Entypo name="home" size={25} color={color} />,
         }}
       />
       <BottomTab.Screen
         name="Portfolio"
         component={PortfolioScreen}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <AntDesign name="piechart" size={25} color={color} />,
         }}
       />
-            <BottomTab.Screen
+      <BottomTab.Screen
         name="Market"
         component={MarketScreen}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <FontAwesome5 name="chart-line" size={25} color={color} />,
         }}
       />
-            <BottomTab.Screen
+      <BottomTab.Screen
         name="Rankings"
         component={RankingScreen}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <MaterialIcons name="leaderboard" size={25} color={color} />,
         }}
       />
-            <BottomTab.Screen
+      <BottomTab.Screen
         name="Profile"
         component={ProfileScreen}
         options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+          tabBarIcon: ({ color }) => <FontAwesome name="user" size={25} color={color} />,
         }}
       />
     </BottomTab.Navigator>
