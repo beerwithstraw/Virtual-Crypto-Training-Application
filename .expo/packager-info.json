@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
+  "expoServerPort": null,
   "packagerPort": 19000,
-  "expoServerNgrokUrl": "https://u8-3qe.enchantedfalcon.virtual-crypto-war-app.exp.direct",
-  "packagerNgrokUrl": "https://packager.u8-3qe.enchantedfalcon.virtual-crypto-war-app.exp.direct",
-  "ngrokPid": 18968,
-  "webpackServerPort": 19006
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
+  "webpackServerPort": null
 }
