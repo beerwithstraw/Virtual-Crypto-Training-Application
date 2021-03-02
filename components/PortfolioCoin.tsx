@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 export interface PortfolioCoinProps {
-    portfolioCoin: {
+    PortfolioCoin: {
         image: string,
         name: string,
         symbol: string,
@@ -16,9 +16,9 @@ export interface PortfolioCoinProps {
 
 const PortfolioCoin = (props: PortfolioCoinProps) => {
     const {
-        portfolioCoin: {
+        PortfolioCoin: {
             image, name, symbol, amount, valueUSD,
-        }
+        },
     } = props;
     return (
         <TouchableOpacity activeOpacity={0.5} style={styles.container}>
