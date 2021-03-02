@@ -1,8 +1,7 @@
 import React from 'react'
 import { FlatList, Image, StyleSheet, Text, View } from 'react-native'
 
-import image from '../assets/images/logo.webp'
-import PortfolioCoin from '../components/PortfolioCoin'
+import MarketCoin from '../components/MarketCoin'
 
 const portfolioCoins = [
     {
@@ -10,38 +9,36 @@ const portfolioCoins = [
         image: 'https://pngimg.com/uploads/bitcoin/bitcoin_PNG47.png',
         name: 'Virtual Dollars',
         symbol: 'USD',
-        amount: '69.420',
-        valueUSD: '69.420'
+        valueChange24H: 0,
+        valueUSD: 69.420
     },
     {
         id: '2',
         image: 'https://pngimg.com/uploads/bitcoin/bitcoin_PNG47.png',
         name: 'Bitcoin',
         symbol: 'BTC',
-        amount: '1.12',
-        valueUSD: '51,240.78'
+        valueChange24H: -1.12,
+        valueUSD: 240.78
     },
     {
         id: '3',
         image: 'https://pngimg.com/uploads/bitcoin/bitcoin_PNG47.png',
          name: 'Ethereum',
         symbol: 'ETH',
-        amount: '2.16',
-        valueUSD: '2930.56'
+        valueChange24H: 2.1,
+        valueUSD: 2930.56
     }
 ]
 const MarketScreen = () => {
     return (
         <View style={styles.container}>
-                <Image style={styles.image} source={image}/>
                 <View style={styles.balanceContainer}>
-                    <Text style={styles.label}>My Portfolio Balance</Text>
-                    <Text style={styles.balance}>$159.24</Text>
+                    <Text style={styles.label}>Crypto Market</Text>
                 </View>
             <FlatList 
                 style={{width: '100%'}}
                 data={portfolioCoins}
-                renderItem={({item}) => <PortfolioCoin portfolioCoin={item} />} 
+                renderItem={({item}) => <MarketCoin MarketCoin={item} />} 
             />
         </View>
     )
@@ -68,6 +65,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 25,
         fontWeight: 'bold',
+        marginTop: 20,
         marginBottom: 5,
     },
     balance: {
