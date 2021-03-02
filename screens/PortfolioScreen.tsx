@@ -33,12 +33,11 @@ const portfolioCoins = [
 const PortfolioScreen = () => {
     return (
         <View style={styles.container}>
-            <Image style={styles.image} source={image}/>
-            <View style={styles.balanceContainer}>
-                <Text style={styles.label}>My Portfolio Balance</Text>
-                <Text style={styles.balance}>$159.24</Text>
-            </View>
-
+                <Image style={styles.image} source={image}/>
+                <View style={styles.balanceContainer}>
+                    <Text style={styles.label}>My Portfolio Balance</Text>
+                    <Text style={styles.balance}>$159.24</Text>
+                </View>
             <FlatList 
                 style={{width: '100%'}}
                 data={portfolioCoins}
